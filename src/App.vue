@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <the-card cardTitle="This is card Title">
+    <template v-slot:default>
+      <p>Hello, I'm Azizul Islam. I am a software developer. I work at BGIFT institute of science & technology.</p>
+    </template>
+    <template v-slot:footer>Test</template>
+  </the-card>
+  <the-card cardTitle="Web Based">
+    <template v-slot:default><a href="">Click</a> here fo more info</template>
+  </the-card>
+  <the-card cardTitle="Demo Title">
+   
+    <template v-slot:footer><button>Buy Now</button></template>
+  </the-card>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import ContactDetails from './ContactDetails.vue'
+import TheCard from './TheCard.vue'
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      
+    };
+  },
   components: {
-    HelloWorld
+    TheCard
   }
+
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
